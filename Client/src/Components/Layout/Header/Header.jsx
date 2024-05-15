@@ -22,8 +22,8 @@ function Header() {
       icon: <MdContactPhone size={"iconSize"} />,
     },
     {
-      to: "/du-an",
-      label: "Dự án",
+      to: "/admin",
+      label: "Admin",
       icon: <MdContactPhone size={"iconSize"} />,
     },
 

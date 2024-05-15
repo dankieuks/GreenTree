@@ -10,7 +10,7 @@ function ContactForm() {
       onSubmit={handleSubmit}
       className="bg-slate-50  p-8 rounded-lg shadow-md flex flex-col"
     >
-      <label htmlFor="email" class="text-blue-500 font-bold">
+      <label htmlFor="email" className="text-blue-500 font-bold">
         Email Address
       </label>
       <input

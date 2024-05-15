@@ -9,6 +9,8 @@ import { Fragment } from "react";
 import "./App.css";
 import Servies from "./Page/Contact/Servies";
 import ServiesDetail from "./Page/Servies/ServiesDetail.jsx";
+
+import Admin from "./Components/Admin/Admin.jsx";
 function App() {
   const publicRouter = [
     { path: "/dich-vu", pages: Servies },
@@ -34,6 +36,7 @@ function App() {
           );
         })}
         <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </Router>
   );
