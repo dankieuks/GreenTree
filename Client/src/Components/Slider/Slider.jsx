@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-export default function Sliders() {
+import axios from "axios";
+function Sliders() {
+ const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/blog`);
+        setPosts(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
   const settings = {
     dots: false,
     infinite: true,
@@ -93,3 +108,4 @@ export default function Sliders() {
     </Slider>
   );
 }
+export default Sliders;

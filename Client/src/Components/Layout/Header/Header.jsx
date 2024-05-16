@@ -22,7 +22,7 @@ function Header() {
       icon: <MdContactPhone size={"iconSize"} />,
     },
     {
-      to: "/admin",
+      to: "/admin/dashboard",
       label: "Admin",
       icon: <MdContactPhone size={"iconSize"} />,
     },

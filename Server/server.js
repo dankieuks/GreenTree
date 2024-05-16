@@ -7,6 +7,7 @@ import bodyParser from "body-parser";
 config();
 
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

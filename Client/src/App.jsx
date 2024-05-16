@@ -11,6 +11,11 @@ import Servies from "./Page/Contact/Servies";
 import ServiesDetail from "./Page/Servies/ServiesDetail.jsx";
 
 import Admin from "./Components/Admin/Admin.jsx";
+import Dashboard from "./Components/Admin/Dashboard/Dashbroad.jsx";
+
+import Product from "./Components/Admin/Product/Product.jsx";
+import Blog from "./Components/Admin/Blog/Blog.jsx";
+
 function App() {
   const publicRouter = [
     { path: "/dich-vu", pages: Servies },
@@ -36,7 +41,11 @@ function App() {
           );
         })}
         <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin" element={<Admin />}>
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="product" element={<Product />} />
+          <Route path="blog" element={<Blog />} />
+        </Route>
       </Routes>
     </Router>
   );
